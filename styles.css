@@ -1,0 +1,80 @@
+/* Google Fonts Import for modern look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.vods-space-link {
+    display: block;
+    margin: 10px 0;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #ff4d00 0%, #ff8700 100%);
+    border: none !important;
+    border-radius: 8px;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(255, 77, 0, 0.2), 0 2px 4px -1px rgba(255, 77, 0, 0.1);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.vods-space-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(255, 77, 0, 0.4);
+    filter: brightness(1.05);
+}
+
+.vods-space-link:active {
+    transform: translateY(0);
+}
+
+.vs-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white !important;
+}
+
+.vs-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.vs-text {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+}
+
+.vs-arrow {
+    margin-left: auto;
+    opacity: 0.8;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.vods-space-link:hover .vs-arrow {
+    transform: translateX(4px);
+    opacity: 1;
+}
+
+/* Shimmer animation */
+.vods-space-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: 0.6s;
+}
+
+.vods-space-link:hover::before {
+    left: 100%;
+}

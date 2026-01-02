@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Vods.space Companion",
+    "version": "1.0",
+    "description": "Quickly jump to vods.space from vlr.gg match pages.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.vlr.gg/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon128.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "globe-duotone.png"
+            ],
+            "matches": [
+                "*://www.vlr.gg/*"
+            ]
+        }
+    ]
+}
