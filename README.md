@@ -58,9 +58,3 @@ You’re now set up to jump from vlr.gg matches directly into **vods.space** for
 
 > If the redirect doesn’t appear immediately, try refreshing the page once after installing the extension.
 
----
-
-## 💬 Feedback
-
-Found a bug or have a feature idea?  
-Issues and pull requests are welcome.
