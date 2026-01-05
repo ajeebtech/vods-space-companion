@@ -46,5 +46,16 @@
     ],
     "host_permissions": [
         "*://*.vlr.gg/*"
-    ]
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "vlr@vods.space",
+            "data_collection_permissions": {
+                "required": [
+                    "websiteContent"
+                ],
+                "optional": []
+            }
+        }
+    }
 }
