@@ -1,41 +1,50 @@
 {
     "manifest_version": 3,
     "name": "Vods.space Companion",
-    "version": "1.0",
-    "description": "Quickly jump to vods.space from vlr.gg match pages.",
+    "version": "1.0.0",
+    "description": "Instant VOD redirect and party sync for VLR.gg matches.",
     "permissions": [
-        "activeTab",
-        "scripting"
+        "scripting",
+        "activeTab"
     ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
     "content_scripts": [
         {
             "matches": [
-                "*://www.vlr.gg/*"
+                "*://*.vlr.gg/*"
             ],
             "js": [
                 "content.js"
             ],
             "css": [
                 "styles.css"
-            ]
+            ],
+            "run_at": "document_idle"
         }
     ],
-    "icons": {
-        "48": "icon48.png",
-        "128": "icon128.png"
-    },
-    "action": {
-        "default_popup": "popup.html",
-        "default_icon": "icon128.png"
-    },
     "web_accessible_resources": [
         {
             "resources": [
                 "globe-duotone.png"
             ],
             "matches": [
-                "*://www.vlr.gg/*"
+                "*://*.vlr.gg/*"
             ]
         }
+    ],
+    "host_permissions": [
+        "*://*.vlr.gg/*"
     ]
 }
